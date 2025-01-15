@@ -1,0 +1,77 @@
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.logo-icon{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-image: url(https://cdn.brandfetch.io/idOlCxDOEn/theme/light/logo.svg?c=1bx1739402657118id64Mup7acJ4uYcy17&t=1725101598553);
+    background-size: cover;
+}
+
+nav{
+    display: flex;
+}
+
+.left-rounded{
+    border-radius: 4px 0 0 4px;
+}
+
+.right-rounded{
+    border-radius: 0 4px 4px 0;
+}
+
+nav>a{
+    border: 1px solid black;
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+.banner-image{
+    height: 450px;
+    background-image: url(https://i.pinimg.com/736x/e8/43/bc/e843bc35162a8029c26e44d18f15fcf4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.content{
+    height: 500px;
+}
+
+.contentblok{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 200px;
+}
+
+.form-result-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Membuat layout fleksibel untuk layar kecil */
+    margin-top: 20px;
+}
+
+#messageForm {
+        flex: 1;
+        min-width: 200px;
+        max-width: 50%;
+        padding: 40px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ }
+
+
+
+footer{
+    text-align: left;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--LINK CSS-->
+    <link rel="stylesheet" href="css\style.css"/>
+</head>
+<body>
+    <!--Logo & Navigasi-->
+    <header class="main-header">
+        <!--Logo-->
+        <div class="logo-icon"></div>
+        <!--Navigasi-->
+        <nav>
+            <a href="#home-page" class="left-rounded">Home</a>
+            <a href="#about-me"> About Me </a>
+            <a href="#portofolio"> Portofolio </a>
+            <a href="#message-me" class="right-rounded">Message Us</a>
+        </nav>     
+    </header>
+
+    <hr />
+
+    <!--Main Content-->
+    <main>
+        <!--Home Page-->
+        <section>
+            <!--Title-->
+            <header id="home-page">
+                <h1>Hi <span id="user-greeting">User</span>,Welcome To My Website</h1>
+                <p> Thanks for coming to my Website:), i hope u enjoy with my lil website </p>
+                <button id="changename"> Ganti Nama </button>
+                <form>
+                    <input required type="text"placeholder="nama anda"id="name-input">
+                    <button id="submit"> Submit </button>
+                </form>
+            </header>
+            <div class="banner-image"></div>
+        </section>
+
+        <!--About Me-->
+         <section>
+        <!--Title-->
+        <header id="about-me">
+            <h1> About Me </h1>
+            <h2> <b> Hello! </b></h2>
+            <p> My name is Firza Syawalia, i'm a student at University of Muslim Indonesia in Makassar.
+                Currently, I'm a student from Computer Science Faculty,Informatics engineering study program. 
+                Actually, I'm still confused about the major I'm taking now. I doubt what I will become in the future,
+                will I be able to go through all this? I hope I will be fine and can get through all this and become a 
+                successful person in the future. 
+            </p>
+        </header>
+        <div class="content"></div>
+
+        </section>
+
+        <!--Portofolio-->
+        <section>
+            <!--Title-->
+            <header id="portofolio"></header>
+        <div class="content"></div>
+        </section>
+
+        <!--Message Me-->
+        <section>
+            <!--Title-->
+            <header id="message-me">
+                <h1> Message Me </h1>
+            </header>
+            <form>
+            <div class="contentblok"></div><form name="message-form" onsubmit="return validateForm()">
+                Nama: <input placeholder="Nama" type="text" name="full-name"/>
+                <br />
+
+                Tanggal Lahir:
+                <input type="date" name="birth-date"/>
+                <br />
+
+                Jenis Kelamin:
+                <input type="radio" id="male" name="gender" value="male" />
+                <label for="male">Laki-laki</label>
+                <input type="radio" id="female" name="female" value="female" />
+                <label for="female">Perempuan</label>
+                <br />
+
+                Pesan:
+                <textarea placeholder="Pesan" name="messages"></textarea>
+                <br />
+
+                <button type="button" id="submit-button">submit</button>
+            </form>
+            
+            <div>
+              <p>Nama: <span id="sender-full-name"></span></p>  
+              <p>Tanggal Lahir: <span id="sender-birth-date"></span></p>
+              <p>Jenis Kelamin: <span id="sender-gender"></span></p>
+              <p>Pesan: <span id="sender-messages"></span></p>
+            </div>
+        </header>
+        <div class="content"></div>
+
+        <div id="resultContainer" class="result-box"></div>
+
+
+        </section>
+    </main>
+
+    <hr />
+
+    <!--Footer-->
+    <footer>
+        <p>&copy; Created by Firza Syawalia^^ </p>
+    </footer>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
