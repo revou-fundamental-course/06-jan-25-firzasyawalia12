@@ -1,28 +1,41 @@
+/* ini adalah file CSS*/
 .main-header{
+    font: arial,sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: sans-serif;
 }
 
-.logo-icon{
+#home {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.logo-icon{  /*gambar logo*/
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    background-image: url(https://cdn.brandfetch.io/idOlCxDOEn/theme/light/logo.svg?c=1bx1739402657118id64Mup7acJ4uYcy17&t=1725101598553);
+    background-image: url(https://i.pinimg.com/736x/a2/56/c5/a256c50518244840aeb09f3f13aa9c1d.jpg);
     background-size: cover;
 }
 
-nav{
-    display: flex;
+.content{
+    height: 150px;
 }
 
+/*Navigasi*/
+nav{
+    display: flex;
+} 
+
 .left-rounded{
-    border-radius: 4px 0 0 4px;
+    border-radius: 3px 0 0 3px;
 }
 
 .right-rounded{
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 3px 3px 0;
 }
 
 nav>a{
@@ -32,6 +45,7 @@ nav>a{
     text-decoration: none;
 }
 
+/*Banner*/
 .banner-image{
     height: 450px;
     background-image: url(https://i.pinimg.com/736x/e8/43/bc/e843bc35162a8029c26e44d18f15fcf4.jpg);
@@ -39,39 +53,209 @@ nav>a{
     background-position: center;
 }
 
-.content{
-    height: 500px;
+.banner-image-1 {
+    background-image: url(https://i.pinimg.com/736x/23/f5/61/23f56184505e06ce4b651694d4785058.jpg);
+  }
+  
+  .banner-image-2 {
+    background-image: url(https://i.pinimg.com/736x/dd/76/f9/dd76f9cb58886fda7a1db6e9eb107f55.jpg);
+  }
+  
+  .banner-image-3 {
+    background-image: url(https://i.pinimg.com/736x/d1/1f/a0/d11fa04a5434abcc67f1b2d2b620fc6d.jpg);
+  }
+
+/*Banner auto-slide*/
+.slides {  
+    display: flex;  
+    flex-direction: column;  
+    align-content: center;  
+    justify-content: center;  
+    align-items: center;  
+    height: 450px;  
+}  
+  
+.img-slideshow {    
+    width: 100%;  
+    height: auto;  
+    max-height: 500px;  
+    display: block;  
+    object-fit: cover;
+    border-radius: 20px; 
+}  
+
+.slide-button {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
 }
 
-.contentblok{
+  /* styling User name */
+#name {
+    cursor: pointer;
+    color: black solid;
+}
+
+#name:hover {
+    color: black solid;
+}
+
+/* Name Hover Tooltip  */
+.tooltip {  
+    position: relative; 
+    cursor: pointer;  
+}  
+
+.tooltip::after {  
+    content: attr(data-tooltip); 
+    position: absolute;  
+    bottom: 100%; 
+    left: 100%;
+    transform: translate(-5px); 
+    font-size: 12px;
+    background-color: black solid; 
+    color: #fff; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    white-space: nowrap; 
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.3s;  
+}  
+
+.tooltip:hover::after {  
+    opacity: 1; 
+    visibility: visible; 
+}
+
+/*Styling Portofolio*/
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    overflow: hidden; /* Supaya gambar tidak keluar dari lingkaran */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pastikan gambar menutupi lingkaran tanpa merusak rasio */
+  }
+
+
+/* Styling Section form */
+.form-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.form-section form,
+.form-section .preview-message {
+    flex: 1;
+    box-sizing: border-box;
+}
+
+/* Form styling */
+form {
+    min-width: 300px;
+    margin-top: 15px;
+    display: flex;
+    gap: 8px;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+label {
+    min-width: 80px;
+}
+
+.input-group {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 200px;
+    width: 100%;
 }
 
-.form-result-container {
+.radio-group {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    align-items: flex-start;
-    flex-wrap: wrap; /* Membuat layout fleksibel untuk layar kecil */
-    margin-top: 20px;
+    gap: 8px;
 }
 
-#messageForm {
-        flex: 1;
-        min-width: 200px;
-        max-width: 50%;
-        padding: 40px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: #f9f9f9;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
- }
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
 
+input, textarea {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 
+textarea {
+    resize: none;
+}
 
+.error-message {
+    color: violet;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+button {
+    font-family: "Lexend Deca", sans-serif;
+    width: fit-content;
+    height: fit-content;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #040d1e;
+    cursor: pointer;
+}
+
+button:hover {
+    background: pink;
+    color: #fff;
+}
+
+/* Preview Message */
+.preview-message {  
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    gap: 8px;
+}  
+
+.preview-item {
+    display: flex;
+    gap: 4px;
+}
+
+/*footer*/
 footer{
-    text-align: left;
+    text-align: right;
 }
